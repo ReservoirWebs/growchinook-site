@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+  db:
+    image: postgres:13.3-alpine
+    hostname: db
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_DB=growchinook
+      - POSTGRES_USER=growchinook
+      - POSTGRES_PASSWORD=growchinook
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - ./data-volumes/database/:/var/lib/postgresql/data
+    restart: unless-stopped

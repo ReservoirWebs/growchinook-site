@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "growchinook-site"
+version = "0.1.0"
+description = "Website for GrowChinook"
+authors = ["Chee Sing Lee <cheesinglee@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.11"
+bioenergetics = "^0.1.0"
+django-rest-framework = "^0.1.0"
+psycopg2-binary = "^2.9.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.black]
+line-length = 80
+target-version = ['py38']
+exclude =  "migrations|\\.eggs"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
